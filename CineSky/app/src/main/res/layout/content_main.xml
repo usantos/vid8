@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_below="@+id/toolbar"
+    android:background="@color/colorPrimaryDark"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/imgSemConexao"
+        android:paddingTop="120dp"
+        android:visibility="gone"
+        android:src="@drawable/sem_conexao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_marginTop="60dp"
+        android:id="@+id/tvDescriptionText"
+        android:textColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:padding="10dp"
+        android:text="Uma seleção de filmes imperdíveis:" />
+
+    <GridView
+        android:layout_below="@+id/tvDescriptionText"
+        android:layout_marginTop="8dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:drawSelectorOnTop="true"
+        android:scrollbarStyle="insideOverlay"
+        android:scrollbars="none"
+        android:layout_gravity="center_vertical"
+        android:id="@+id/gridFilmes"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:verticalSpacing="6dp"
+        android:horizontalSpacing="2dp"
+        android:stretchMode="columnWidth"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:numColumns="2"/>
+
+</RelativeLayout>
