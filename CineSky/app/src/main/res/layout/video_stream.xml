@@ -2,24 +2,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/tvNomeFilme"
+        android:textSize="12sp"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/white"
+        android:padding="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/white"
-        android:textSize="14sp"
-        android:padding="10dp"
-        android:text="" />
+        android:text="{TITULO_FILME}" />
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/tvNomeFilme">
 
-        <br.com.cinesky.controls.FullscreenVideoLayout
-            android:id="@+id/videoview"
+        <br.com.cinesky.controls.FullscreenVideoView
+            android:id="@+id/fslFilme"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
     </FrameLayout>

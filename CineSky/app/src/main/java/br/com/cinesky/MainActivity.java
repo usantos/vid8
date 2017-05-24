@@ -85,10 +85,10 @@ public class MainActivity extends AppCompatActivity {
             gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                    Intent i = new Intent(MainActivity.this, VideoActivity.class);
+                    Intent i = new Intent(getBaseContext(), VideoActivity.class);
                     TextView tv =(TextView) view.findViewById(R.id.tvDescription);
                     i.putExtra("nomeFilme",tv.getText().toString());
-                    //startActivity(i);
+                    startActivity(i);
                 }
             });
         } catch (Exception e) {
@@ -117,7 +117,6 @@ public class MainActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
-
 
     class GetDataTask extends AsyncTask<Void, Void, Void> {
 
