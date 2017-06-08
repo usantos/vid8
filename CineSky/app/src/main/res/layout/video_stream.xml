@@ -5,25 +5,42 @@
     android:background="@color/colorPrimaryDark"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/tvNomeFilme"
-        android:textSize="12sp"
-        android:background="@color/colorPrimary"
-        android:textColor="@color/white"
-        android:padding="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="{TITULO_FILME}" />
-
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/tvNomeFilme">
+        android:layout_height="match_parent">
 
-        <br.com.cinesky.controls.FullscreenVideoView
+        <FrameLayout
+            android:id="@+id/frmFilmeAcao"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:padding="5dp"
+                android:layout_gravity="left"
+                android:id="@+id/btnVoltar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_back_black_24dp"/>
+
+            <TextView
+                android:id="@+id/tvNomeFilme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center"
+                android:background="@color/transparent"
+                android:gravity="top"
+                android:padding="5dp"
+                android:text="{TITULO_FILME}"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+        </FrameLayout>
+
+        <br.com.cinesky.controls.FullscreenVideoLayout
             android:id="@+id/fslFilme"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
+
     </FrameLayout>
 
 </RelativeLayout>
